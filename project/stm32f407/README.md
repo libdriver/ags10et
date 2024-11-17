@@ -96,11 +96,37 @@ ags10et: SDA connected to GPIOB PIN9.
 ```shell
 ags10et -t read --times=3
 
+ags10et: chip is ASAIR AGS10ET.
+ags10et: manufacturer is ASAIR.
+ags10et: interface is IIC.
+ags10et: driver version is 1.0.
+ags10et: min supply voltage is 2.9V.
+ags10et: max supply voltage is 3.1V.
+ags10et: max current is 33.00mA.
+ags10et: max temperature is 85.0C.
+ags10et: min temperature is -40.0C.
+ags10et: start read test.
+ags10et: version is 0x0C.
+ags10et: ethanol is 2399ppb.
+ags10et: ethanol is 2377ppb.
+ags10et: ethanol is 2374ppb.
+ags10et: resistance is 7411100.00ohm.
+ags10et: zero point calibration 0xF6F7.
+ags10et: current resistance zero point calibration.
+ags10et: reset zero point calibration.
+ags10et: modify slave address 0x1A.
+ags10et: finish read test.
 ```
 
 ```shell
 ags10et -e read --times=3
 
+ags10et: 1/3.
+ags10et: ethanol is 2076ppb.
+ags10et: 2/3.
+ags10et: ethanol is 2067ppb.
+ags10et: 3/3.
+ags10et: ethanol is 2052ppb.
 ```
 
 ```shell
