@@ -64,10 +64,10 @@
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an ags10et handle structure
- * @param[in]  reg is the register address
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[in]  reg register address
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len length of data
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -90,10 +90,10 @@ static uint8_t a_ags10et_iic_read(ags10et_handle_t *handle, uint8_t reg, uint8_t
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an ags10et handle structure
- * @param[in] reg is the register address
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an ags10et handle structure
+ * @param[in] reg register address
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len length of data
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -111,8 +111,8 @@ static uint8_t a_ags10et_iic_write(ags10et_handle_t *handle, uint8_t reg, uint8_
 
 /**
  * @brief     calculate the crc
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len length of data
  * @return    crc
  * @note      none
  */
@@ -143,7 +143,7 @@ static uint8_t a_ags10et_calc_crc(uint8_t *data, uint8_t len)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an ags10et handle structure
+ * @param[in] *handle pointer to an ags10et handle structure
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -212,7 +212,7 @@ uint8_t ags10et_init(ags10et_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an ags10et handle structure
+ * @param[in] *handle pointer to an ags10et handle structure
  * @return    status code
  *            - 0 success
  *            - 1 deinit failed
@@ -244,8 +244,8 @@ uint8_t ags10et_deinit(ags10et_handle_t *handle)
 
 /**
  * @brief     set slave address
- * @param[in] *handle points to an ags10et handle structure
- * @param[in] addr is the slave address
+ * @param[in] *handle pointer to an ags10et handle structure
+ * @param[in] addr slave address
  * @return    status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -270,8 +270,8 @@ uint8_t ags10et_set_slave_address(ags10et_handle_t *handle, uint8_t addr)
 
 /**
  * @brief      get slave address
- * @param[in]  *handle points to an ags10et handle structure
- * @param[out] *addr points to a slave address buffer
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[out] *addr pointer to a slave address buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -296,9 +296,9 @@ uint8_t ags10et_get_slave_address(ags10et_handle_t *handle, uint8_t *addr)
 
 /**
  * @brief      read ethanol
- * @param[in]  *handle points to an ags10et handle structure
- * @param[out] *raw points to a raw data buffer
- * @param[out] *ppb points to a converted data buffer
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[out] *raw pointer to a raw data buffer
+ * @param[out] *ppb pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read ethanol failed
@@ -351,8 +351,8 @@ uint8_t ags10et_read_ethanol(ags10et_handle_t *handle, uint32_t *raw, uint32_t *
 
 /**
  * @brief     zero point calibration
- * @param[in] *handle points to an ags10et handle structure
- * @param[in] raw is the set raw data
+ * @param[in] *handle pointer to an ags10et handle structure
+ * @param[in] raw raw data
  * @return    status code
  *            - 0 success
  *            - 1 zero point calibration failed
@@ -393,7 +393,7 @@ uint8_t ags10et_zero_point_calibration(ags10et_handle_t *handle, uint16_t raw)
 
 /**
  * @brief     reset zero point calibration
- * @param[in] *handle points to an ags10et handle structure
+ * @param[in] *handle pointer to an ags10et handle structure
  * @return    status code
  *            - 0 success
  *            - 1 reset zero point calibration failed
@@ -434,7 +434,7 @@ uint8_t ags10et_reset_zero_point_calibration(ags10et_handle_t *handle)
 
 /**
  * @brief     zero point calibration using current resistance
- * @param[in] *handle points to an ags10et handle structure
+ * @param[in] *handle pointer to an ags10et handle structure
  * @return    status code
  *            - 0 success
  *            - 1 current resistance zero point calibration failed
@@ -475,9 +475,9 @@ uint8_t ags10et_current_resistance_zero_point_calibration(ags10et_handle_t *hand
 
 /**
  * @brief      get resistance
- * @param[in]  *handle points to an ags10et handle structure
- * @param[out] *raw points to a raw data buffer
- * @param[out] *ohm points to a converted data buffer
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[out] *raw pointer to a raw data buffer
+ * @param[out] *ohm pointer to a converted data buffer
  * @return     status code
  *             - 0 success
  *             - 1 get resistance failed
@@ -524,8 +524,8 @@ uint8_t ags10et_get_resistance(ags10et_handle_t *handle, uint32_t *raw, double *
 
 /**
  * @brief      get version
- * @param[in]  *handle points to an ags10et handle structure
- * @param[out] *version points to a version buffer
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[out] *version pointer to a version buffer
  * @return     status code
  *             - 0 success
  *             - 1 get resistance failed
@@ -569,8 +569,8 @@ uint8_t ags10et_get_version(ags10et_handle_t *handle, uint8_t *version)
 
 /**
  * @brief     modify slave address
- * @param[in] *handle points to an ags10et handle structure
- * @param[in] addr_7bit is the new slave address
+ * @param[in] *handle pointer to an ags10et handle structure
+ * @param[in] addr_7bit new slave address
  * @return    status code
  *            - 0 success
  *            - 1 modify slave address failed
@@ -612,10 +612,10 @@ uint8_t ags10et_modify_slave_address(ags10et_handle_t *handle, uint8_t addr_7bit
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an ags10et handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an ags10et handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -644,10 +644,10 @@ uint8_t ags10et_set_reg(ags10et_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an ags10et handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an ags10et handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -676,7 +676,7 @@ uint8_t ags10et_get_reg(ags10et_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an ags10et info structure
+ * @param[out] *info pointer to an ags10et info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
