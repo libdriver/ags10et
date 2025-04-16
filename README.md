@@ -10,7 +10,7 @@
 
 AGS10ET is a high-performance TVOC sensor which is equipped with a dedicated ASIC chip, adopting special digital module acquisition technology and gas sensing technology, to ensure good performance of high reliability, long-term stability, low power consumption, high sensitivity. Output signal of AGS10ET is standard I²C. Each sensor is fully calibrated and tested before delivery to meet the large-scale applications of customers.
 
-LibDriver AGS10ET is the full function driver of AGS10ET launched by LibDriver.It provides the function of reading ethanol, etc. LibDriver is MISRA compliant.
+LibDriver AGS10ET is a full-featured driver of AGS10ET launched by LibDriver.It provides the function of reading ethanol, etc. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
