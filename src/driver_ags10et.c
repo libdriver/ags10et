@@ -44,8 +44,8 @@
 #define SUPPLY_VOLTAGE_MIN        2.9f                   /**< chip min supply voltage */
 #define SUPPLY_VOLTAGE_MAX        3.1f                   /**< chip max supply voltage */
 #define MAX_CURRENT               33.0f                  /**< chip max current */
-#define TEMPERATURE_MIN           -40.0f                 /**< chip min operating temperature */
-#define TEMPERATURE_MAX           85.0f                  /**< chip max operating temperature */
+#define TEMPERATURE_MIN           0.0f                   /**< chip min operating temperature */
+#define TEMPERATURE_MAX           50.0f                  /**< chip max operating temperature */
 #define DRIVER_VERSION            1000                   /**< driver version */
 
 /**
@@ -528,7 +528,7 @@ uint8_t ags10et_get_resistance(ags10et_handle_t *handle, uint32_t *raw, double *
  * @param[out] *version pointer to a version buffer
  * @return     status code
  *             - 0 success
- *             - 1 get resistance failed
+ *             - 1 get version failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 crc is error
