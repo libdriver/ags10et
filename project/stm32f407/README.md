@@ -82,8 +82,8 @@ ags10et: driver version is 1.0.
 ags10et: min supply voltage is 2.9V.
 ags10et: max supply voltage is 3.1V.
 ags10et: max current is 33.00mA.
-ags10et: max temperature is 85.0C.
-ags10et: min temperature is -40.0C.
+ags10et: max temperature is 50.0C.
+ags10et: min temperature is 0.0C.
 ```
 
 ```shell
